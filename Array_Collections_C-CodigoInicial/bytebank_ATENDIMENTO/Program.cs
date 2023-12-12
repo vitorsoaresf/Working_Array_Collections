@@ -14,4 +14,22 @@ void TestaArrayInt()
     Console.WriteLine($"A médias das idade é: {idades.Average()}");
 }
 
-TestaArrayInt();
+void TestaBuscarPalavra()
+{
+    string[] arrayDePalavras = new string[] { "Ana", "João", "Pedro", "Maria", "Cesar" };
+
+    Console.WriteLine("Digite a palavra a ser encontrada: ");
+    string busca = Console.ReadLine()!;
+
+    if (arrayDePalavras.Contains(busca))
+    {
+        Console.WriteLine("A palavra foi encontrada\n");
+    }
+    else
+    {
+        Console.WriteLine("A palavra não foi encontrada\n");
+    }
+}
+
+// TestaArrayInt();
+TestaBuscarPalavra();
