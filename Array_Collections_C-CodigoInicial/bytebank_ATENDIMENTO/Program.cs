@@ -56,10 +56,30 @@ void TestaMediana(Array array)
 void TestaArrayDeContasCorrentes()
 {
     ListaDeContasCorrentes listaDeContas = new();
-    listaDeContas.AdicionarConta(new ContaCorrente(874, "234234234-A"));
-    listaDeContas.AdicionarConta(new ContaCorrente(874, "234234343-B"));
-    listaDeContas.AdicionarConta(new ContaCorrente(874, "234234123-C"));
+    
+    var conta1 = new ContaCorrente(874, "234234234-A");
+    conta1.Saldo = 100;
+
+    var conta2 = new ContaCorrente(875, "234234343-B");
+    conta2.Saldo = 50;
+
+    var conta3 = new ContaCorrente(876, "234234123-C");
+    conta3.Saldo = 80;
+
+    var conta4 = new ContaCorrente(877, "234234123-D");
+    conta3.Saldo = 80;
+
+    var conta5 = new ContaCorrente(878, "234234123-E");
+    conta3.Saldo = 80;
+
+    listaDeContas.AdicionarConta(conta1);
+    listaDeContas.AdicionarConta(conta2);
+    listaDeContas.AdicionarConta(conta3);
+    listaDeContas.AdicionarConta(conta4);
+    listaDeContas.AdicionarConta(conta5);
     // listaDeContas.MostrarContas();
+
+    listaDeContas.MostraMaiorContaDaLista();
 }
 
 

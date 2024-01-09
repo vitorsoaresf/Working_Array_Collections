@@ -13,7 +13,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
         private int _itensCount = 0;
         public ListaDeContasCorrentes(int tamanhoInicial = 5)
         {
-                _itens = new ContaCorrente[tamanhoInicial];
+            _itens = new ContaCorrente[tamanhoInicial];
         }
 
         public void AdicionarConta(ContaCorrente conta)
@@ -33,7 +33,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
 
         private bool VerificaQuantidade()
         {
-            if(_itensCount < _itens.Length)
+            if (_itensCount < _itens.Length)
             {
                 return true;
             }
@@ -46,6 +46,24 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
             {
                 Console.WriteLine($"Conta: {item}");
             }
+        }
+
+        public void MostraMaiorContaDaLista()
+        {
+            var contaComMaiorValor = new ContaCorrente(1,"1");
+            contaComMaiorValor.Saldo = 0;
+
+
+
+            foreach (ContaCorrente item in _itens)
+            {
+                if(item.Saldo > contaComMaiorValor.Saldo)
+                {
+                    contaComMaiorValor = item;
+                }
+            }
+            Console.WriteLine($"Conta com maior valor: {contaComMaiorValor}");
+
         }
     }
 }
